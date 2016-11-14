@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  email: MyString
+  zip_code: MyString
+  gallons_in_tank: 9.99
+  salt_water: false
+  phone_number: MyString
+
+two:
+  email: MyString
+  zip_code: MyString
+  gallons_in_tank: 9.99
+  salt_water: false
+  phone_number: MyString

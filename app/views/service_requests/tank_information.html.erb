@@ -1,0 +1,35 @@
+<div class="content">
+
+	<%= render 'service_requests/step_header' %>
+
+	<div class="form-container">
+
+		<%= form_tag update_tank_details_path do %>
+
+			<div class="field">
+		    	
+		    	<label>Gallons in Your Tank</label><br>
+		    	<input type="number" name="gallons_in_tank" required>
+		
+		  	</div>
+
+			<div class="field">
+				<label>Is it a salt water tank?</label><br>
+				<%# f.check_box :salt_water %>
+			</div>
+
+		  <div class="actions">
+
+		    <input type="submit" value="Next" class="button green-background medium" %>
+
+		  </div>
+
+
+		<%end%>
+
+
+	</div>
+
+
+
+</div>

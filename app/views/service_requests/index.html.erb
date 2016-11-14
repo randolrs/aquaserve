@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Service Requests</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Email</th>
+      <th>Zip code</th>
+      <th>Gallons in tank</th>
+      <th>Salt water</th>
+      <th>Phone number</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @service_requests.each do |service_request| %>
+      <tr>
+        <td><%= service_request.email %></td>
+        <td><%= service_request.zip_code %></td>
+        <td><%= service_request.gallons_in_tank %></td>
+        <td><%= service_request.salt_water %></td>
+        <td><%= service_request.phone_number %></td>
+        <td><%= link_to 'Show', service_request %></td>
+        <td><%= link_to 'Edit', edit_service_request_path(service_request) %></td>
+        <td><%= link_to 'Destroy', service_request, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Service request', new_service_request_path %>

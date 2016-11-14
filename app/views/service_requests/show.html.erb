@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @service_request.email %>
+</p>
+
+<p>
+  <strong>Zip code:</strong>
+  <%= @service_request.zip_code %>
+</p>
+
+<p>
+  <strong>Gallons in tank:</strong>
+  <%= @service_request.gallons_in_tank %>
+</p>
+
+<p>
+  <strong>Salt water:</strong>
+  <%= @service_request.salt_water %>
+</p>
+
+<p>
+  <strong>Phone number:</strong>
+  <%= @service_request.phone_number %>
+</p>
+
+<%= link_to 'Edit', edit_service_request_path(@service_request) %> |
+<%= link_to 'Back', service_requests_path %>

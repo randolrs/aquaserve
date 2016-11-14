@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
   
+  resources :service_requests
   root 'pages#home'
+
+  get '/tank_information/:id' => 'service_requests#tank_information', as: 'tank_information'
+
+  get '/requested_services/:id' => 'service_requests#requested_services', as: 'requested_services'
+
+  post 'service_requests/update_tank_details/:id' => 'service_requests#update_tank_details', as: 'update_tank_details'
 
   #get 'about' => 'pages#about'
 

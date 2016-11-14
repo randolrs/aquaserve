@@ -1,0 +1,47 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+@media only screen and (max-width: 1025px) {
+
+	html{
+		
+		body{
+
+			.content-container{
+				padding: 0px;
+			}
+
+			.step-header{
+				
+				width: 100%;
+				display: block;
+				margin-bottom: 3em;
+				
+
+			}
+
+		}
+	}
+
+}
+
+@media only screen and (max-width: 800px) {
+
+	html{
+		
+		body{
+
+			background: #fff !important;
+			background-color: #fff !important;
+
+			.form-container{
+				border: none;
+				box-shadow: none;
+			}
+
+		}
+	}
+
+}

@@ -4,16 +4,22 @@
 
 
 html{
+	
 	body{
-		
+			
+
 		background-color: #f6f6f6;
 
+		.centered{
+			text-align:center;
+		}
+		
 		input[type=number]::-webkit-inner-spin-button, 
 		input[type=number]::-webkit-outer-spin-button { 
 		  -webkit-appearance: none; 
 		  margin: 0; 
 		}
-		
+
 
 
 		.green-background{
@@ -48,6 +54,34 @@ html{
 
 		.button.medium{
 			font-size: 2em;
+		}
+
+
+
+		ul.horizontal{
+	
+			list-style-type: none;
+		    margin: 0;
+		    margin-bottom: -1px;
+		    padding: 0;
+		    display: block;
+			
+			li{
+
+				display: inline-block;
+		        text-align: center;
+		        vertical-align: top;
+
+				a{
+
+					display: block;
+		            font-size: 18px;
+		            padding: 10px;
+		           	letter-spacing: 1.5px;
+				}
+
+			}
+
 		}
 
 	}

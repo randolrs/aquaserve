@@ -5,7 +5,6 @@
 
 .step-header{
 	max-width: 100%;
-	padding: 1em;
 	margin: 0 auto;
 	width: 800px;
 	margin-bottom: 3em;
@@ -13,6 +12,7 @@
 	table{
 
 		width: 100%;
+		box-shadow: 0px 1px 1px rgba(100, 100, 100, 0.3);
 
 		tr{
 
@@ -21,12 +21,22 @@
 			td{
 				text-align: center;
 				width: 33.3%;
-				padding: 1em 2em;
 				border: 1px solid #96b5e1;
 				background: #fff;
 				font-weight: bold;
     			color: #264d85;
     			position: relative;
+
+    			a{
+    				display: block;
+    				padding: 1em 2em;
+    				color: #264d85;
+    			}
+
+    			a:hover{
+    				cursor: pointer;
+    				text-decoration: none;
+    			}
 			}
 
 			td:before{
@@ -53,6 +63,10 @@
 			    content: "";
 			    margin: auto;
 			    z-index: 2;
+			}
+
+			td:last-child:after{
+				
 			}
 
 			td.completed{

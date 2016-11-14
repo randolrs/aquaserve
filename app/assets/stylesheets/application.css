@@ -36,8 +36,13 @@ html, body{
 
  }
 
- body{
- 	background-color: #f6f6f6;
+
+
+ .content-container{
+ 	top: 50px;
+ 	position: relative;
+ 	padding: 50px;
+ 	
  }
 
 .brand-gradient{

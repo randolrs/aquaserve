@@ -7,21 +7,40 @@ class ServiceRequestsController < ApplicationController
     @service_requests = ServiceRequest.all
   end
 
+  def initiate_quote
+
+    @service_request = ServiceRequest.new
+
+    @service_request.update(:zip_code => params[:zip_code])
+
+    @service_request.save
+
+    redirect_to tank_information_path(@service_request.id)
+
+  end
+
 
 
   def tank_information
-
-    @request_step = "tank_information"
 
     if ServiceRequest.where(:id => params[:id]).exists?
 
       @service_request = ServiceRequest.find(params[:id])
 
+      @service_request.salt_water = true
+
+      @request_step = "tank_details"
+
     else
 
-      redirect_to root_path
+      redirect_to :back
 
     end
+
+
+    
+
+    
 
 
   end

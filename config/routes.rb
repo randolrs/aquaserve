@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   
   resources :service_requests
+
   root 'pages#home'
 
   get '/tank_information/:id' => 'service_requests#tank_information', as: 'tank_information'
@@ -11,6 +12,7 @@ Rails.application.routes.draw do
 
   get '/quotes/:id' => 'service_requests#quotes', as: 'service_quotes'
 
+  post 'initiate_quote' => 'service_requests#initiate_quote', as: 'initiate_quote'
 
   post 'service_requests/update_tank_details/:id' => 'service_requests#update_tank_details', as: 'update_tank_details'
 

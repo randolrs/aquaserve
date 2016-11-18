@@ -1,49 +1,31 @@
 
 <div class="content">
 
-	<%= render 'service_requests/step_header' %>
-
-	<div class="form-container">
+	<section class="home-hero">
 
 		<%= form_for(@service_request) do |f| %>
 
-		<%# form_tag update_tank_details_path do %>
-
 		  	<div class="field centered">
 
-		    	<label>How many gallons in your tank?</label><br>
-
-		    	<%= f.number_field :gallons_in_tank, required: true, autofocus: true, class: "short centered" %>
+		    	<%= f.number_field :zip_code, required: true, autofocus: true, class: "short centered" %>
 
 		  	</div>
 
-			<div class="field centered">
+			<div class="actions centered">
 
-				<label>Is it a salt water tank?</label><br>
-
-				<br>
-
-				<ul class="horizontal centered">
-					<li><a class="clickable-toggle-option active" data-option-toggle-id="service_request_salt_water" data-toggle-value="true">Yes</a></li><li><a class="clickable-toggle-option inactive" data-option-toggle-id="service_request_salt_water" data-toggle-value="false">No</a></li>
-				</ul>
-				
-				<div style="display: none;">
-					<%= f.check_box :salt_water, value: true %>
-				</div>
+				<input type="submit" value="Next" class="button orange-background medium" %>
 
 			</div>
 
-			<br>
-
-		  <div class="actions">
-
-		    <input type="submit" value="Next" class="button orange-background medium" %>
-
-		  </div>
-
-
 		<%end%>
 
-	</div>
+	</section>
 
+	<section>
+
+		<h4></h4>
+
+	</section>
+
+	
 </div>

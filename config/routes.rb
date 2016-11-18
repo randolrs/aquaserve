@@ -5,9 +5,19 @@ Rails.application.routes.draw do
 
   get '/tank_information/:id' => 'service_requests#tank_information', as: 'tank_information'
 
+  get '/contact_information/:id' => 'service_requests#contact_information', as: 'contact_information'
+
   get '/requested_services/:id' => 'service_requests#requested_services', as: 'requested_services'
 
+  get '/quotes/:id' => 'service_requests#quotes', as: 'service_quotes'
+
+
   post 'service_requests/update_tank_details/:id' => 'service_requests#update_tank_details', as: 'update_tank_details'
+
+  post 'service_requests/update_requested_services/:id' => 'service_requests#update_requested_services', as: 'update_requested_services'
+
+  post 'service_requests/update_contact_information/:id' => 'service_requests#update_contact_information', as: 'update_contact_information'
+
 
   #get 'about' => 'pages#about'
 

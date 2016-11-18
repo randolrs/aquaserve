@@ -6,31 +6,36 @@
 	<div class="form-container">
 
 		<%= form_for(@service_request) do |f| %>
-		  <% if @service_request.errors.any? %>
-		    <div id="error_explanation">
-		      <h2><%= pluralize(@service_request.errors.count, "error") %> prohibited this service_request from being saved:</h2>
 
-		      <ul>
-		      <% @service_request.errors.full_messages.each do |message| %>
-		        <li><%= message %></li>
-		      <% end %>
-		      </ul>
-		    </div>
-		  <% end %>
+		<%# form_tag update_tank_details_path do %>
 
-		  <div class="field">
-		    <%= f.label :email %><br>
-		    <%= f.email_field :email, required: true %>
-		  </div>
-		  <div class="field">
-		    <%= f.label :zip_code %><br>
-		    <%= f.text_field :zip_code, required: true  %>
-		  </div>
+		  	<div class="field centered">
+
+		    	<label>How many gallons in your tank?</label><br>
+
+		    	<%= f.number_field :gallons_in_tank, required: true, class: "short centered" %>
+
+		  	</div>
+
+			<div class="field centered">
+
+				<label>Is it a salt water tank?</label><br>
+
+				<ul class="horizontal centered">
+					<li><a>Yes</a></li>
+					<li><a>No</a></li>
+				</ul>
+				<%# f.check_box :salt_water %>
+			</div>
 
 		  <div class="actions">
-		    <%= f.submit "Next", class:"button green-background medium" %>
+
+		    <input type="submit" value="Next" class="button green-background medium" %>
+
 		  </div>
-		<% end %>
+
+
+		<%end%>
 
 	</div>
 

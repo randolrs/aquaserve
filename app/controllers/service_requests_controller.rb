@@ -11,6 +11,8 @@ class ServiceRequestsController < ApplicationController
 
   def tank_information
 
+    @request_step = "tank_information"
+
     if ServiceRequest.where(:id => params[:id]).exists?
 
       @service_request = ServiceRequest.find(params[:id])
@@ -20,6 +22,53 @@ class ServiceRequestsController < ApplicationController
       redirect_to root_path
 
     end
+
+
+  end
+
+
+  def quotes
+
+    @request_step = "service_quotes"
+
+    @contact_information_completed = true
+
+    @tank_details_completed = true
+
+
+  end
+
+
+
+
+
+  def contact_information
+
+    @request_step = "contact_information"
+
+    @tank_details_completed = true
+
+  end
+
+
+
+  def update_contact_information
+
+    if ServiceRequest.where(:id => params[:id]).exists?
+
+      @service_request = ServiceRequest.find(params[:id])
+
+      @service_request.update(:email => params[:email])
+
+      redirect_to service_quotes_path
+
+    else
+
+      redirect_to root_path
+
+    end
+
+    
 
 
   end
@@ -54,9 +103,33 @@ class ServiceRequestsController < ApplicationController
 
 
 
+  def update_requested_services
+
+
+    if ServiceRequest.where(:id => params[:id]).exists?
+
+      @service_request = ServiceRequest.find(params[:id])
+
+      @service_request.update(:gallons_in_tank => params[:gallons_in_tank])
+
+      redirect_to requested_services_path
+
+
+    else
+
+      redirect_to root_path
+      
+    end
+
+
+  end
+
+
 
 
   def requested_services
+
+    @request_step = "requested_services"
 
     if ServiceRequest.where(:id => params[:id]).exists?
 
@@ -93,7 +166,7 @@ class ServiceRequestsController < ApplicationController
 
     respond_to do |format|
       if @service_request.save
-        format.html { redirect_to tank_information_path(@service_request), notice: 'Service request was successfully created.' }
+        format.html { redirect_to contact_information_path(@service_request.id), notice: 'Service request was successfully created.' }
         format.json { render :show, status: :created, location: @service_request }
       else
         format.html { render :new }

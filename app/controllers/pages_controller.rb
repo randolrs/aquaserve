@@ -4,6 +4,8 @@ class PagesController < ApplicationController
 
   	@service_request = ServiceRequest.new
 
+  	@request_step = "tank_details"
+
   end
 
 end

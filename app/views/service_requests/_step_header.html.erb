@@ -4,9 +4,11 @@
 
     <tr>
 
-      <td class="completed"><a>Basic Information</a></td>
-      <td><a>Tank Information</a></td>
-      <td><a>Requested Services</a></td>
+      <td class="<% if @request_step=="tank_details" %>active<%end%>"><a><% if @tank_details_completed == true%><span class="glyphicon glyphicon-ok" aria-hidden="true" style="margin-right: 5px;"></span><%end%>Tank Details</a></td>
+
+      <td class="<% if @request_step=="contact_information" %>active<%end%> <% unless @contact_information_completed == true%> inactive <%end%>"><a><% if @contact_information_completed == true%><span class="glyphicon glyphicon-ok" aria-hidden="true" style="margin-right: 5px;"></span><%end%>Contact Information</a></td>
+
+      <td class="<% if @request_step=="service_quotes" %> active <%else%> inactive <%end%>"><a>Service Quotes</a></td>
 
     </tr>
 

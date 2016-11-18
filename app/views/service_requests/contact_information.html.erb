@@ -9,18 +9,34 @@
 		<%= form_tag update_contact_information_path do %>
 
 		  <div class="field">
-		    <label>Email</label><br>
-		    <%# f.email_field :email, required: true %>
-		    <%= email_field_tag(:email) %>
-		  </div>
-		  <div class="field">
+
 		    <label>Full Name</label><br>
-		    <%# f.email_field :email, required: true %>
-		    <%= text_field_tag(:full_name) %>
+		    
+		    <input type="text" name="full_name" required>
+
+		  </div>
+
+		  <div class="field">
+
+		    <label>Email</label><br>
+		 
+		    <input type="email" name="email" required>
+
+		  </div>
+
+
+		  <div class="field">
+		    
+		    <label>Phone Number</label><br>
+
+		    <input type="text" name="phone_number" required>
+
 		  </div>
 
 		  <div class="actions">
-		    <input type="Submit" value="Get Quotes" class="button green-background medium">
+
+		    <input type="Submit" value="Get My Quotes" class="button green-background medium">
+
 		  </div>
 
 		<% end %>

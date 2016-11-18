@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161117232851) do
+ActiveRecord::Schema.define(version: 20161118022030) do
 
   create_table "service_requests", force: :cascade do |t|
     t.string   "email"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20161117232851) do
     t.boolean  "cleaning"
     t.boolean  "design"
     t.boolean  "relocation"
+    t.string   "full_name"
   end
 
 end

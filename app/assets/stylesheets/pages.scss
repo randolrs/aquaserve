@@ -6,8 +6,13 @@
 .step-header{
 	max-width: 100%;
 	margin: 0 auto;
-	width: 800px;
+	display:block;
 	margin-bottom: 3em;
+	position: fixed;
+    top: 50px;
+    width: 100%;
+
+    z-index: 99;
 
 	table{
 
@@ -78,8 +83,9 @@
 			    z-index: 2;
 			}
 
-			td:last-child:after{
-
+			td:last-child{
+				border: none;
+				color: yellow;
 			}
 
 			td.active{

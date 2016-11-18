@@ -58,7 +58,7 @@ class ServiceRequestsController < ApplicationController
 
       @service_request = ServiceRequest.find(params[:id])
 
-      @service_request.update(:email => params[:email])
+      @service_request.update(:email => params[:email], :phone_number => params[:phone_number], :full_name => params[:full_name])
 
       redirect_to service_quotes_path
 
@@ -207,6 +207,6 @@ class ServiceRequestsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def service_request_params
-      params.require(:service_request).permit(:email, :zip_code, :gallons_in_tank, :salt_water, :phone_number)
+      params.require(:service_request).permit(:email, :zip_code, :gallons_in_tank, :salt_water, :phone_number, :full_name)
     end
 end

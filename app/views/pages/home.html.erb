@@ -13,7 +13,7 @@
 
 		    	<label>How many gallons in your tank?</label><br>
 
-		    	<%= f.number_field :gallons_in_tank, required: true, class: "short centered" %>
+		    	<%= f.number_field :gallons_in_tank, required: true, autofocus: true, class: "short centered" %>
 
 		  	</div>
 
@@ -21,12 +21,19 @@
 
 				<label>Is it a salt water tank?</label><br>
 
+				<br>
+
 				<ul class="horizontal centered">
-					<li><a>Yes</a></li>
-					<li><a>No</a></li>
+					<li><a class="clickable-toggle-option active" data-option-toggle-id="service_request_salt_water" data-toggle-value="true">Yes</a></li><li><a class="clickable-toggle-option inactive" data-option-toggle-id="service_request_salt_water" data-toggle-value="false">No</a></li>
 				</ul>
-				<%# f.check_box :salt_water %>
+				
+				<div style="display: none;">
+					<%= f.check_box :salt_water, value: true %>
+				</div>
+
 			</div>
+
+			<br>
 
 		  <div class="actions">
 

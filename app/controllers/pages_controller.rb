@@ -6,6 +6,8 @@ class PagesController < ApplicationController
 
   	@request_step = "tank_details"
 
+  	@service_request.salt_water = true
+
   end
 
 end

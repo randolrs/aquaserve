@@ -41,7 +41,7 @@ html, body{
  .content-container{
  	top: 50px;
  	position: relative;
- 	padding: 50px;
+ 	padding-bottom: 50px;
  	
  }
 

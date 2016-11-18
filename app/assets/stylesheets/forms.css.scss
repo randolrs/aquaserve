@@ -12,6 +12,10 @@
 	box-shadow: 0px 1px 1px rgba(100,100,100,0.3);
 	background: #fff;
 
+	z-index: 9;
+
+	margin-top: 100px;
+
 	.input-table{
 		width:100%;
 		block: block;
@@ -33,6 +37,8 @@
 		display: block;
 		padding: 10px 0px;
 		text-indent: 5px;
+		font-size: 1.5em;
+    	color: #333;
 	}
 
 	input.short{
@@ -41,7 +47,7 @@
 	}
 
 	input[type="text"], input[type="number"], input[type="email"], textarea, select{
-		border: 2px solid #bbb;
+		border: 2px solid #aaa;
 		margin-top: 1em;
 	}
 
@@ -58,6 +64,28 @@
 
 	textarea{
 		resize: none;
+	}
+
+	.clickable-toggle-option.active{
+		color: #fff;
+		background-color: #4173c9;
+
+	    border: 1px solid #4173c9;
+	}
+
+	.clickable-toggle-option{
+		color: #666;
+		background-color: #eee;
+		border: 1px solid #ccc;
+
+		font-size: 1.5em;
+    	display: inline-block;
+    	width: 100px;
+	}
+
+	.clickable-toggle-option:hover{
+		text-decoration: none;
+		cursor: pointer;
 	}
 
 

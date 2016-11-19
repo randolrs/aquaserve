@@ -1,6 +1,12 @@
 class ServiceRequestsController < ApplicationController
   before_action :set_service_request, only: [:show, :edit, :update, :destroy]
 
+  require 'net/http'
+
+  require 'json'
+
+  require 'uri'
+
   # GET /service_requests
   # GET /service_requests.json
   def index
@@ -14,6 +20,10 @@ class ServiceRequestsController < ApplicationController
     @service_request.update(:zip_code => params[:zip_code])
 
     @service_request.save
+
+
+    
+
 
     redirect_to tank_information_path(@service_request.id)
 
@@ -178,6 +188,7 @@ class ServiceRequestsController < ApplicationController
 
     respond_to do |format|
       if @service_request.save
+
         format.html { redirect_to tank_information_path(@service_request.id), notice: 'Service request was successfully created.' }
         format.json { render :show, status: :created, location: @service_request }
       else

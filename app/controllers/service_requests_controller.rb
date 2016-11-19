@@ -38,11 +38,6 @@ class ServiceRequestsController < ApplicationController
     end
 
 
-    
-
-    
-
-
   end
 
 
@@ -87,8 +82,6 @@ class ServiceRequestsController < ApplicationController
 
     end
 
-    
-
 
   end
 
@@ -102,9 +95,9 @@ class ServiceRequestsController < ApplicationController
 
         @service_request = ServiceRequest.find(params[:id])
 
-        @service_request.update(:gallons_in_tank => params[:gallons_in_tank], :salt_water => true)
+        @service_request.update(:gallons_in_tank => params[:gallons_in_tank], :salt_water => params[:salt_water])
 
-        redirect_to requested_services_path(@service_request.id)
+        redirect_to contact_information_path(@service_request.id)
 
       else
 
@@ -185,7 +178,7 @@ class ServiceRequestsController < ApplicationController
 
     respond_to do |format|
       if @service_request.save
-        format.html { redirect_to contact_information_path(@service_request.id), notice: 'Service request was successfully created.' }
+        format.html { redirect_to tank_information_path(@service_request.id), notice: 'Service request was successfully created.' }
         format.json { render :show, status: :created, location: @service_request }
       else
         format.html { render :new }

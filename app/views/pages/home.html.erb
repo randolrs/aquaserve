@@ -1,31 +1,34 @@
 
-<div class="content">
+<section class="home-hero centered">
 
-	<section class="home-hero">
+	<%= form_for(@service_request) do |f| %>
 
-		<%= form_for(@service_request) do |f| %>
+		<h2>Get Instant Quotes from Local Service Providers</h4>
 
-		  	<div class="field centered">
+		<h3>Enter Your Zip Code Below to Get Started</h5>
 
-		    	<%= f.number_field :zip_code, required: true, autofocus: true, class: "short centered" %>
+		<br>
 
-		  	</div>
+	  	<div class="field centered">
 
-			<div class="actions centered">
+	    	<%= f.number_field :zip_code, required: true, autofocus: true, placeholder: "Zip Code", class: "short centered" %>
 
-				<input type="submit" value="Next" class="button orange-background medium" %>
+	  	</div>
 
-			</div>
+	  	<br>
 
-		<%end%>
+		<div class="actions centered">
 
-	</section>
+			<input type="submit" value="Get Started" class="button orange-background medium" %>
 
-	<section>
+		</div>
 
-		<h4></h4>
+	<%end%>
 
-	</section>
+</section>
 
-	
-</div>
+<section>
+
+	<h4></h4>
+
+</section>

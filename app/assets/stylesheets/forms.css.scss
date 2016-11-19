@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-.form-container{
+.form-container, .form-content{
 	max-width: 500px;
 	margin:0 auto;
     position: relative;
@@ -89,4 +89,9 @@
 	}
 
 
+}
+
+.form-content{
+
+	margin-top: 0px;
 }

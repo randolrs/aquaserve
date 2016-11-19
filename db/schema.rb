@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161118022030) do
+ActiveRecord::Schema.define(version: 20161119223143) do
 
   create_table "service_requests", force: :cascade do |t|
     t.string   "email"
@@ -26,6 +26,14 @@ ActiveRecord::Schema.define(version: 20161118022030) do
     t.boolean  "design"
     t.boolean  "relocation"
     t.string   "full_name"
+  end
+
+  create_table "waitlist_entries", force: :cascade do |t|
+    t.string   "email"
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "zip_code"
   end
 
 end

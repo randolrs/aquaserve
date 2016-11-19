@@ -1,51 +1,49 @@
 
-<div class="content">
+<%= render 'service_requests/step_header' %>
 
-	<%= render 'service_requests/step_header' %>
+<div class="form-container">
 
-	<div class="form-container">
+	<%# form_for(@service_request) do |f| %>
 
-		<%# form_for(@service_request) do |f| %>
+	<%= form_tag update_tank_details_path do %>
 
-		<%= form_tag update_tank_details_path do %>
+	  	<div class="field centered">
 
-		  	<div class="field centered">
+	    	<label>How many gallons in your tank?</label><br>
 
-		    	<label>How many gallons in your tank?</label><br>
+	    	<input type="number" class="short centered" name="gallons_in_tank" required="true" autofocus>
+	    	<%# f.number_field :gallons_in_tank, required: true, autofocus: true, class: "short centered" %>
 
-		    	<input type="number" class="short centered" name="gallons_in_tank" required="true" autofocus>
-		    	<%# f.number_field :gallons_in_tank, required: true, autofocus: true, class: "short centered" %>
+	  	</div>
 
-		  	</div>
+		<div class="field centered">
 
-			<div class="field centered">
-
-				<label>Is it a salt water tank?</label><br>
-
-				<br>
-
-				<ul class="horizontal centered">
-					<li><a class="clickable-toggle-option active" data-option-toggle-id="service_request_salt_water" data-toggle-value="true">Yes</a></li><li><a class="clickable-toggle-option inactive" data-option-toggle-id="service_request_salt_water" data-toggle-value="false">No</a></li>
-				</ul>
-				
-				<div style="display: none;">
-					<%# f.check_box :salt_water, value: true %>
-					<input type="checkbox" name="salt_water" id="service_request_salt_water" checked %>
-				</div>
-
-			</div>
+			<label>Is it a salt water tank?</label><br>
 
 			<br>
 
-		  <div class="actions">
+			<ul class="horizontal centered">
+				<li><a class="clickable-toggle-option active" data-option-toggle-id="service_request_salt_water" data-toggle-value="true">Yes</a></li><li><a class="clickable-toggle-option inactive" data-option-toggle-id="service_request_salt_water" data-toggle-value="false">No</a></li>
+			</ul>
+			
+			<div style="display: none;">
+				<%# f.check_box :salt_water, value: true %>
+				<input type="checkbox" name="salt_water" id="service_request_salt_water" checked %>
+			</div>
 
-		    <input type="submit" value="Next" class="button orange-background medium" %>
+		</div>
 
-		  </div>
+		<br>
+
+	  <div class="actions">
+
+	    <input type="submit" value="Next" class="button orange-background medium" %>
+
+	  </div>
 
 
-		<%end%>
-
-	</div>
+	<%end%>
 
 </div>
+
+

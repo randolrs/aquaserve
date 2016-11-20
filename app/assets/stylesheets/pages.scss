@@ -9,8 +9,8 @@ section.home-hero{
 
 	display: block;
 	width:100%;
-	min-height: 800px;
-	margin-bottom: -50px;
+	
+	
 	color: #fff;
 	background-image: asset-url("aquarium_main.jpeg");
 
@@ -148,7 +148,7 @@ section.home-hero{
 .content{
 
 	padding-top: 30px;
-	
+
 	h2{
 		font-size: 2.5em;
 	}
@@ -156,4 +156,9 @@ section.home-hero{
 	h3{
 		font-size: 2em;
 	}
+}
+
+.readable-content{
+	margin: 0 auto;
+	position: relative;
 }

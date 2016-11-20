@@ -37,7 +37,7 @@ class ServiceRequestsController < ApplicationController
 
       @service_request = ServiceRequest.find(params[:id])
 
-      @service_request.salt_water = true
+      @service_request.salt_water = false
 
       @request_step = "tank_details"
 
